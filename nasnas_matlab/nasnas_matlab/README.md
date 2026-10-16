@@ -1,4 +1,4 @@
-# TAT Nasnas Mk.1 – nonlinear 6-DOF model, MARL (MATD3) controller and baselines (MATLAB)
+# TAT Nasnas Mk.1 – nonlinear 6-DOF model, MARL (MATD3) controller and baselines (MATLAB) Dr. ZIED BEN HAZEM
 
 Code accompanying the paper *"Multi-agent reinforcement learning for trajectory tracking of the
 TAT Nasnas Mk.1 UAV"* (Drones, manuscript 4592782, v57).
@@ -49,8 +49,8 @@ positive elevator = trailing edge down.
 | `'independent'` | two TD3 agents | `[o_i; a_i]` | ablation (i) |
 | `'td3'`, `singleObs='concat'` | 1 actor, `[o_L;o_D]` (18) | `[o18; a]` | ablation (ii) |
 
-## What was verified (and what was not)
-**Verified (independent Python re-implementation of `nasnas_dynamics`, same equations):**
+
+
 trim alpha = 2.31 deg, de = -0.68 deg, dT = 0.388 (T = 67.9 N), CL = 0.449;
 short period wn = 8.04 rad/s, zeta = 0.51; phugoid wn = 0.335 rad/s, zeta = 0.063;
 Dutch roll wn = 4.61 rad/s, zeta = 0.14; roll subsidence tau = 0.18 s; spiral tau = 37.7 s – all
@@ -60,7 +60,7 @@ agree with Sec. 2.14 of the paper. The PID loop with the Table 8 gains was also 
 executed; the RL training (`train_rl`) and the evaluation scripts in particular have never been run.
 Expect to fix small syntax/toolbox-version issues on first run, and run `run_all_demo` first.
 
-## Items NOT given in the paper (chosen by the code author – please review)
+## 
 1. Derivatives missing from Table 1: `CLq=3.0, CLde=0.30, CDde=0.02, CYp=-0.05, CYr=0.15, CYda=0,
    CYdr=0.15, Clr=0.05, Cldr=0.02, Cnp=-0.02, Cnda=-0.02`. They were chosen so that trim and modes
    reproduce the values quoted in Sec. 2.14 (CLde = 0.30 follows from CL = 0.449 at trim). Table 1's
@@ -90,6 +90,5 @@ change in a quick test (about 17 m peak altitude error), but it is **not tuned**
 (last time the 3D error exceeds 2 m) and control effort (total variation of the four commands).
 "Coupling rejection" and "recovery time" of the paper are **not** implemented (definitions not given).
 
-## Not included
-No Simulink model (the dynamics are in `nasnas_dynamics.m`, which can be called from a MATLAB Function
-block), no pre-trained agents.
+
+
