@@ -7,7 +7,7 @@ TAT Nasnas Mk.1 UAV"* (Drones, manuscript 4592782).
 * MATLAB R2023b or newer
 * Deep Learning Toolbox (dlnetwork / dlgradient / adamupdate) – needed for the RL part only
 * Optional: Parallel Computing Toolbox + CUDA GPU (training), Optimization Toolbox (`fsolve`; trim
-  falls back to `fminsearch` without it)
+  `fminsearch`)
 * No Statistics Toolbox needed (Welch test and t-quantiles are implemented with base MATLAB)
 
 ## Quick start
