@@ -1,10 +1,10 @@
 # TAT Nasnas Mk.1 – nonlinear 6-DOF model, MARL (MATD3) controller and baselines (MATLAB) Dr. ZIED BEN HAZEM
 
 Code accompanying the paper *"Multi-agent reinforcement learning for trajectory tracking of the
-TAT Nasnas Mk.1 UAV"* (Drones, manuscript 4592782, v57).
+TAT Nasnas Mk.1 UAV"* (Drones, manuscript 4592782).
 
 ## Requirements
-* MATLAB R2021b or newer
+* MATLAB R2023b or newer
 * Deep Learning Toolbox (dlnetwork / dlgradient / adamupdate) – needed for the RL part only
 * Optional: Parallel Computing Toolbox + CUDA GPU (training), Optimization Toolbox (`fsolve`; trim
   falls back to `fminsearch` without it)
